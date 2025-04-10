@@ -2,8 +2,8 @@ import React, { useCallback } from "react";
 
 const BikeVisualization = ({
     frame1, stem1, handlebar1, stackHeight1,
-    frame2, stem2, handlebar2, stackHeight2}) => {
-
+    frame2, stem2, handlebar2, stackHeight2
+}) => {
     const degToRad = (angle) => (angle * Math.PI) / 180;
 
     const calculateBarPosition = useCallback((frame, stem, handlebar, stackHeight) => {
@@ -23,17 +23,14 @@ const BikeVisualization = ({
         const handlebarDrop = handlebar.drop;
         const adjustedStackHeight = parseFloat(stackHeight || 0);
 
-        // Effective reach calculation
         const effectiveStemReach = stemLength * Math.cos(fullStemAngle);
         const effectiveReach = Math.round(frame.reach + effectiveStemReach + handlebarReach);
 
-        // Effective drop calculation
         const effectiveStemStack = stemLength * Math.sin(fullStemAngle);
         const effectiveStack = Math.round(frame.stack + adjustedStackHeight + effectiveStemStack);
         const handlebarVerticalShift = handlebar.reach * Math.tan(degToRad(headTubeAngle));
         const totalDrop = Math.round(effectiveStack - handlebarDrop - handlebarVerticalShift);
 
-        // Positions for drawing (if you need them)
         const stemEnd = [
             stemLength * Math.cos(fullStemAngle),
             adjustedStackHeight + stemLength * Math.sin(fullStemAngle)
