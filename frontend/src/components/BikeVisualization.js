@@ -5,8 +5,6 @@ const BikeVisualization = ({
     frame2, stem2, handlebar2, stackHeight2,
     stems = []
 }) => {
-    const [bestStem, setBestStem] = useState(null);
-
     const hasValidBikes = frame1 && stem1 && handlebar1 && frame2 && handlebar2;
 
     const degToRad = (angle) => (angle * Math.PI) / 180;
