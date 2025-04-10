@@ -21,7 +21,7 @@ const BikeComparisonImage = ({ bike1, bike2 }) => {
 
     return (
         <div style={{ textAlign: "center", marginTop: "30px" }}>
-            <h3>🖼️ Front-End Geometry Visual</h3>
+            <h3>Front-End Geometry Visual</h3>
             {imageBase64 ? (
                 <img
                     // Use backticks + interpolation:
