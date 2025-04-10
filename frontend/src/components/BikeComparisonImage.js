@@ -6,7 +6,7 @@ const BikeComparisonImage = ({ bike1, bike2 }) => {
     useEffect(() => {
         if (!bike1 || !bike2) return;
 
-        fetch("`${process.env.REACT_APP_API_URL}/geometry-image", {
+        fetch(`${process.env.REACT_APP_API_URL}/geometry-image`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ bike1, bike2 }),
