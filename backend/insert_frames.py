@@ -3,12 +3,15 @@ from database import SessionLocal, Frame
 # Create a session
 db = SessionLocal()
 
-# List of new frames to insert
+# List of Hope HBT Paris frames to insert
 frames = [
-    {"make": "Stromm Track", "size": "Small", "reach": 400, "stack": 480, "top_tube": None, "head_angle": 73.5, "seat_angle": 74, "head_tube": None, "chainstay": None, "wheelbase": 940.7, "front_centre": 565.7, "bb_drop": None, "fork_rake": 40},
-    {"make": "Stromm Track", "size": "Medium", "reach": 425, "stack": 500, "top_tube": None, "head_angle": 73.5, "seat_angle": 74, "head_tube": None, "chainstay": None, "wheelbase": 971.6, "front_centre": 596.6, "bb_drop": None, "fork_rake": 40},
-    {"make": "Stromm Track", "size": "Large", "reach": 450, "stack": 520, "top_tube": None, "head_angle": 73.5, "seat_angle": 74, "head_tube": None, "chainstay": None, "wheelbase": 1002.6, "front_centre": 627.6, "bb_drop": None, "fork_rake": 40},
-    {"make": "Stromm Track", "size": "Extra Large", "reach": 466, "stack": 540, "top_tube": None, "head_angle": 73.5, "seat_angle": 74, "head_tube": None, "chainstay": None, "wheelbase": 1024.5, "front_centre": 649.5, "bb_drop": None, "fork_rake": 40}
+    {"make": "Hope HBT Paris", "size": "XS1", "reach": 416.5, "stack": 462, "top_tube": 532, "head_angle": 74, "seat_angle": 76, "head_tube": 72, "chainstay": None, "wheelbase": None, "front_centre": 551.5, "bb_drop": None, "fork_rake": None},
+    {"make": "Hope HBT Paris", "size": "S1", "reach": 436.5, "stack": 468, "top_tube": 553.5, "head_angle": 74, "seat_angle": 76, "head_tube": 78, "chainstay": None, "wheelbase": None, "front_centre": 473, "bb_drop": None, "fork_rake": None},
+    {"make": "Hope HBT Paris", "size": "L1", "reach": 467, "stack": 478, "top_tube": 586, "head_angle": 75, "seat_angle": 76, "head_tube": 86, "chainstay": None, "wheelbase": None, "front_centre": 602.5, "bb_drop": None, "fork_rake": None},
+    {"make": "Hope HBT Paris", "size": "L2", "reach": 467, "stack": 478, "top_tube": 586, "head_angle": 75, "seat_angle": 76, "head_tube": 86, "chainstay": None, "wheelbase": None, "front_centre": 602.5, "bb_drop": None, "fork_rake": None},
+    {"make": "Hope HBT Paris", "size": "XL1", "reach": 487, "stack": 486.5, "top_tube": 608, "head_angle": 75, "seat_angle": 76, "head_tube": 95, "chainstay": None, "wheelbase": None, "front_centre": 620, "bb_drop": None, "fork_rake": None},
+    {"make": "Hope HBT Paris", "size": "XXL1", "reach": 516, "stack": 486, "top_tube": 637, "head_angle": 75, "seat_angle": 76, "head_tube": 95, "chainstay": None, "wheelbase": None, "front_centre": 649, "bb_drop": None, "fork_rake": None},
+    {"make": "Hope HBT Paris", "size": "XXL2", "reach": 516, "stack": 486, "top_tube": 637, "head_angle": 75, "seat_angle": 76, "head_tube": 95, "chainstay": None, "wheelbase": None, "front_centre": 649, "bb_drop": None, "fork_rake": None},
 ]
 
 # Insert frames into the database
@@ -20,4 +23,4 @@ for frame_data in frames:
 db.commit()
 db.close()
 
-print("✅ Stromm frames inserted successfully!")
+print("✅ Hope HBT Paris frames inserted successfully!")
